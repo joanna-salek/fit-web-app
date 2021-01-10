@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<form action="/orm" method="post">
+        <div class="container">
+            <p>
+                <label for="lift"><b>lift in kg</b></label>
+                <input name="lift" placeholder="100" type="text">
+            </p>
+            <p>
+                <label for="reps"><b>Reps</b></label>
+                <input name="reps" placeholder="5"  type="text">
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </div>
+    </form>
+{% endblock %}
+
+{% block body %}
+{% endblock %}

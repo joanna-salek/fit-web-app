@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<div class = "container">
+        <div class="header">
+                    <nav>
+                        <ul class="nav nav-pills pull-right">
+                            <li role="presentation" class ="active"><a href= {{ url_for("go_to_register")}}>Register</a>
+                            </li>
+                            <li role="presentation" class ="active"><a href={{ url_for("go_to_log_in") }}>Login</a>
+                            </li>
+                            <li role="presentation" class ="active"><a href={{ url_for("main") }}>Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h2 class="text-muted">Basic exercises</h2>
+                </div>
+
+                <div class="jumbotrontext-muted">
+                    <h3>These are absolutely a must in your training</h3>
+                    <p><h5>Below you can find some basic exercises from you should definitely start your gym adventure</h5></p>
+                </div>
+    </div>
+    <div class="container">
+            <img src="../static/top.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4>Deadlift</h4>
+                    <p>Golden standard. It will help strengthen your core</p>
+                    <img src="../static/deadlift.jpg" class="Responsive image" alt="Deadlift" style="max-height: 500px; max-width: 500px;">
+
+                    <h4>Squat</h4>
+                    <p>If it nice glutes you want, you should try it</p>
+                    <img src="../static/squat1.jpg" class="Responsive image" alt="Squat" style="max-height: 500px; max-width: 500px;">
+
+                    <h4>Bench press</h4>
+                    <p>Best compound exercise for upper body.</p>
+                    <img src="../static/bench-press.jpg" class="Responsive image" alt="Bench press" style="max-height: 500px; max-width: 500px;">
+                </div>
+
+                <div class="col-lg-6">
+                    <h4>Pull ups</h4>
+                    <p>Strong upper back muscles are sexy and you know it</p>
+                    <img src="../static/pull-up.jpg" class="Responsive image" alt="Pull-up" style="max-height: 500px; max-width: 500px;">
+
+                    <h4>Strict press</h4>
+                    <p>Really nice for your shoulder, just do it</p>
+                    <img src="../static/strict-press.jpg" class="Responsive image" alt="Scrit press" style="max-height: 500px; max-width: 500px;">
+
+                    <h4>Biceps curl</h4>
+                    <p>Big biceps always is a plus</p>
+                    <img src="../static/biceps.jpg" class="Responsive image" alt="Deadlift" style="max-height: 500px; max-width: 500px;">
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>&copy; Joanna Sałek</p>
+            </footer>
+
+    </div>
+
+{% endblock %}

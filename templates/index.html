@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <div class = "container">
+    <h3 class="text-muted">Made to be strong</h3>
+        <div class="jumbotron">
+            <h2>Programe your training</h2>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" style="color:white" href={{ url_for("go_to_register")}}>Sign up today</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4><a href={{ url_for("basic")}}>You feel weak?</a></h4>
+                    <p>Find out what exercises everybody should perform everyday</p>
+
+                    <h4><a href={{ url_for("diets")}}>You want to loose weight quickly?</a></h4>
+                    <p>Loosing weight can be quite easy. One thing you need to do is follow this rules. Find out 5 best diets that can change your life</p>
+
+                    <h4><a href={{ url_for("go_to_register")}}>How strong is your body?</a></h4>
+                    <p>Enter your gym results and get personalize exercises</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4><a href={{ url_for("orm_form")}}>One rep max calculator</a></h4>
+                    <p>Calculate your one rep max based on your max reps in squat, deadlift or bench press</p>
+
+                    <h4><a href={{ url_for("bmi_form")}}>BMI calculator</a></h4>
+                    <p>Check out if you are fat?????</p>
+
+                    <h4><a href={{ url_for("brownie")}}>Great great great recepie for fit brownie</a></h4>
+                    <p>OMG you have to try this one</p>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>&copy; Joanna Sałek</p>
+            </footer>
+
+    </div>
+{% endblock %}

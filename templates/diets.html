@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <div class = "container">
+        <div class="header">
+                    <nav>
+                        <ul class="nav nav-pills pull-right">
+                            <li role="presentation" class ="active"><a href= {{ url_for("go_to_register")}}>Register</a>
+                            </li>
+                            <li role="presentation" class ="active"><a href={{ url_for("go_to_log_in") }}>Login</a>
+                            </li>
+                            <li role="presentation" class ="active"><a href={{ url_for("main") }}>Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h2 class="text-muted">5 best diets to loose weight</h2>
+                </div>
+
+                <div class="jumbotrontext-muted">
+                    <h3>You must rember there is no such a thing as "magic" diet, only way is simply eat less calories</h3>
+                    <p><h5>Below you can find 5 diets for different calories/proteins intake</h5></p>
+                </div>
+    </div>
+    <div class="container">
+            <img src="../static/fit.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
+    </div>
+    <p></p>
+{% endblock head %}
+
+{% block body %}
+    <div class="container">
+
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <img src="../static/diet1.jpg" class="Responsive image" alt="Diet_1500" style="max-height: 500px; max-width: 500px;">
+                    <h4>1500 calories, 90 grams of protein</h4>
+                    <p>Golden standard. It will help strengthen your core</p>
+
+                    <img src="../static/diet2.jpg" class="Responsive image" alt="Diet_2000" style="max-height: 500px; max-width: 500px;">
+                    <h4>2000 calories, 105 grams of protein</h4>
+                    <p>If it nice glutes you want, you should try it</p>
+
+                    <img src="../static/diet3.jpg" class="Responsive image" alt="Diet_2500" style="max-height: 500px; max-width: 500px;">
+                    <h4>2500 calories, 120 grams of protein</h4>
+                    <p>Best compound exercise for upper body.</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="../static/diet4.jpg" class="Responsive image" alt="Diet_3000" style="max-height: 500px; max-width: 500px;">
+                    <h4>3000 calories, 140 grams of protein</h4>
+                    <p>Strong upper back muscles are sexy and you know it</p>
+
+                    <img src="../static/diet5.jpg" class="Responsive image" alt="Diet_3500" style="max-height: 500px; max-width: 500px;">
+                    <h4>3500 calories, 155 grams of protein</h4>
+                    <p>Really nice for your shoulder, just do it</p>
+
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>&copy; Joanna Sałek</p>
+            </footer>
+{% endblock body %}

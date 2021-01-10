@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <Title>Muscles</Title>
+    <h1>Please enter your data</h1>
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for("register") }}" method="post" role="form">
+    <div class="container">
+        <div class="mb-3">
+            <label for="e-mail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" name="e-mail">
+        </div>
+        <div class="mb-3">
+            <label for="psw" class="form-label">Password</label>
+            <input type="password" class="form-control" name="psw">
+        </div>
+        <div class="mb-3">
+            <label for="c_psw" class="form-label">Connfirm Password</label>
+            <input type="password" class="form-control" name="c_psw">
+        </div>
+        <div class="mb-3">
+            <label for="f_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" name='f_name'>
+        </div>
+        <div class="mb-3">
+            <label for="l_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="l_name">
+        </div>
+        <div class="mb-3">
+            <label for="b_day" class="form-label">Birthday</label>
+            <input type="date" class="form-control" name="b_day">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+{% endblock %}

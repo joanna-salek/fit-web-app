@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<div class="container">
+        <div class="header">
+            <div class="container">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" class ="active"><a href= {{ url_for("go_to_register")}}>Register</a>
+                        </li>
+                        <li role="presentation" class ="active"><a href={{ url_for("go_to_log_in") }}>Login</a>
+                        </li>
+                        <li role="presentation" class ="active"><a href={{ url_for("main") }}>Home</a>
+                        </li>
+                    </ul>
+                </nav>
+                <img src="../static/top.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
+
+                <h2 class="text-muted">Your BMI</h2>
+
+                <h3>{{ bmi }}</h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="container">
+            {% if bmi >= 25 %}
+                {% block content %}
+                    <p class="lead"></p>
+                    <p>It is to much, you need to loose weight</p>
+                    <p><a class="btn btn-lg btn-danger" style="color:white" href={{ url_for("diets")}} role="button">Loose weight now</a>
+                    </p>
+                {% endblock content %}
+
+            {% elif bmi > 18.5 and bmi < 25 %}
+                {% block content_2 %}
+                    <p class="lead"></p>
+                    <p>It is just right</p>
+                    <p><a class="btn btn-lg btn-success" style="color:white" href={{ url_for("diets")}} role="button">It is alright, maybe serniczek?</a>
+                    </p>
+                {% endblock content_2 %}
+            {% else %}
+                {% block content_3 %}
+                    <p class="lead"></p>
+                    <p>It is to little, you need to gain weight</p>
+                    <p><a class="btn btn-lg btn-warning" style="color:white" href={{ url_for("diets")}} role="button">Gain weight now</a>
+                    </p>
+                {% endblock content_3 %}
+            {% endif %}
+
+
+            <footer class="footer">
+                <p>&copy; Joanna Sałek</p>
+            </footer>
+        </div>
+    </div>
+
+{% endblock %}

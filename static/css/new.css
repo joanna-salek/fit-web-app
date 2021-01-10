@@ -1,0 +1,29 @@
+
+body {
+    background-image:url(../background.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width:1200px;
+    margin:0 auto;
+}
+
+a:link {
+  text-decoration: none;
+    color: black;
+
+}
+
+a:visited {
+  text-decoration: none;
+    color: black;
+}
+
+a:hover {
+  font-weight: bold;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+

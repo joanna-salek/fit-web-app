@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<form action="{{ url_for("bmi") }}" method="post" role="form">
+    <div class="container">
+        <div class="mb-3">
+            <label for="weight" class="form-label">Weight in kg</label>
+            <input type="text" class="form-control" name="weight">
+        </div>
+        <div class="mb-3">
+            <label for="height" class="form-label">Height</label>
+            <input type="text" class="form-control" name="height">
+        </div>
+        <div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
