@@ -19,9 +19,16 @@
         <div class="header">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("main") }}>Home</a></li>
-                    <li role="presentation" class="nav-item active"><a class="nav-link" href= {{ url_for("go_to_register")}}>Register</a></li>
-                    <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("go_to_log_in") }}>Login</a></li>
+                    {% if not home %}
+                        <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("main") }}>Home</a></li>
+                    {% endif %}
+                    {% if user  %}
+                        <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("auth.user") }}>Your profile</a></li>
+                        <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("auth.log_out") }}>Logout</a></li>
+                    {% elif user == None %}
+                        <li role="presentation" class="nav-item active"><a class="nav-link" href= {{ url_for("register")}}>Register</a></li>
+                        <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("log_in") }}>Login</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>

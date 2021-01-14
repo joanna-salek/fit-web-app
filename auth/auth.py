@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 
-auth = Blueprint("auth", __name__, template_folder="templates", static_folder="static")
+auth = Blueprint("auth", __name__, template_folder=r"C:\Users\joann\PycharmProjects\fit_web_app\auth\templates", static_folder="static")
 # configure app
 app = Flask(__name__)
 
@@ -15,18 +15,18 @@ app.config['SECRET_KEY'] = str(s_key)
 
 @auth.route('/')
 def user():
-    if "email" in session:
-        email = session["email"]
-        return render_template("lifts.html", email=email)
+    if "user" in session:
+        user = session["user"]
+        return render_template("lifts.html", user=user)
     else:
-        return redirect(url_for("go_to_log_in"))
+        return redirect(url_for("log_in"))
 
 
 @auth.route('/log-out')
 def log_out():
     session.pop("email", None)
     flash("you have log-out successfully", "success")
-    return redirect(url_for("go_to_log_in"))
+    return redirect(url_for("log_in"))
 
 
 

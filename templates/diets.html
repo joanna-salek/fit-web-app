@@ -3,28 +3,16 @@
 {% block head %}
     <div class = "container">
         <div class="header">
-                    <nav>
-                        <ul class="nav nav-pills pull-right">
-                            <li role="presentation" class ="active"><a href= {{ url_for("go_to_register")}}>Register</a>
-                            </li>
-                            <li role="presentation" class ="active"><a href={{ url_for("go_to_log_in") }}>Login</a>
-                            </li>
-                            <li role="presentation" class ="active"><a href={{ url_for("main") }}>Home</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <h2 class="text-muted">5 best diets to loose weight</h2>
-                </div>
-
-                <div class="jumbotrontext-muted">
-                    <h3>You must rember there is no such a thing as "magic" diet, only way is simply eat less calories</h3>
-                    <p><h5>Below you can find 5 diets for different calories/proteins intake</h5></p>
-                </div>
+            <h2 class="text-muted">5 best diets to loose weight</h2>
+        </div>
+        <div class="jumbotrontext-muted">
+            <h3>You must rember there is no such a thing as "magic" diet, only way is simply eat less calories</h3>
+            <p><h5>Below you can find 5 diets for different calories/proteins intake</h5></p>
+        </div>
     </div>
     <div class="container">
             <img src="../static/fit.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
     </div>
-    <p></p>
 {% endblock head %}
 
 {% block body %}

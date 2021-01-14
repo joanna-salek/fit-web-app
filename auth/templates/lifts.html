@@ -1,17 +1,14 @@
-{% extends 'layout.html' %}
+{% extends 'layout1.html' %}
 
 {% block head %}
     <Title>Muscles</Title>
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="nav-item active"><a class="nav-link" href={{ url_for("auth.log_out") }}>Logout</a></li>
-            </ul>
         </nav>
     </div>
     <h1>Please fill your data</h1>
 
-    {{ email }}
+    {{ user }}
 {% endblock %}
 
 {% block body %}
