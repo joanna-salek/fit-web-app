@@ -133,10 +133,6 @@ def brownie():
     return render_template("brownie.html", user=user_check())
 
 
-@app.route('/orm-form')
-def orm_form():
-    return render_template("orm-form.html", user=user_check())
-
 
 @app.route('/orm', methods=['POST', 'GET'])
 def orm():

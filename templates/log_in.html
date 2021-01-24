@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout2.html' %}
 
 {% block head %}
     <Title>Muscles</Title>
@@ -6,20 +6,23 @@
 {% endblock %}
 
 {% block body %}
-    <form action="{{ url_for("log_in") }}" method="POST">
-        <div class="imgcontainer">
-            <img src="../static/squat1.jpg" alt="Avatar" class="image" style="height: 200px; height: 300px;">
+        <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+               <form action="{{ url_for("log_in") }}" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Adress</label>
+                        <input type="text" class="form-control" id="email1" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="psw" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="psw" name="psw">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email Adress</label>
-            <input type="text" class="form-control" id="email1" name="email">
-        </div>
-        <div class="mb-3">
-            <label for="psw" class="form-label">Password</label>
-            <input type="password" class="form-control" id="psw" name="psw">
-        </div>
-        <div>
-            <button type="submit">Login</button>
-        </div>
-    </form>
+    </div>
 {% endblock %}

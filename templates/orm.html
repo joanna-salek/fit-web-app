@@ -1,10 +1,12 @@
-{% extends 'layout.html' %}
+{% extends 'layout2.html' %}
 
 {% block head %}
-<div class="container">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
         <div class="header">
             <div class="container">
-                <img src="../static/top.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
 
                 <h2 class="text-muted">Your ORM</h2>
 
@@ -12,16 +14,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block body %}
-    <div class="header">
-        <div class="container">
-
-            <footer class="footer">
-                <p>&copy; Joanna Sałek</p>
-            </footer>
-        </div>
-    </div>
-
 {% endblock %}

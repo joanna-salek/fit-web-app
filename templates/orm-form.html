@@ -1,22 +1,29 @@
-{% extends 'layout.html' %}
+{% extends 'layout2.html' %}
 
 {% block head %}
-<form action="/orm" method="post">
-        <div class="container">
-            <p>
-                <label for="lift"><b>lift in kg</b></label>
-                <input name="lift" placeholder="100" type="text">
-            </p>
-            <p>
-                <label for="reps"><b>Reps</b></label>
-                <input name="reps" placeholder="5"  type="text">
-            </p>
-            <p>
-                <input type="submit" value="Submit">
-            </p>
-        </div>
-    </form>
+
 {% endblock %}
 
 {% block body %}
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <form action="{{ url_for("orm") }}" method="post" role="form">
+                    <div class="container">
+                        <div class="mb-3">
+                           <label for="lift">Lift in kg</label>
+                            <input name="lift" class="form-control" placeholder="100" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label for="reps">Reps</label>
+                            <input name="reps" placeholder="5"  class="form-control" type="text">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

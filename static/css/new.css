@@ -1,29 +1,42 @@
 
 body {
-    background-image:url(../background.jpg);
-    background-repeat: no-repeat;
     background-size: auto;
-    width:1200px;
-    margin:0 auto;
+    font-family: "Ralway", sans-serif;
+    color: black;
 }
+
+.container-fluid {
+    height: 100vh;
+    width: 100%;
+    background-size: auto;
+    background: url("../back-ground.jpg");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+ }
 
 a:link {
   text-decoration: none;
-    color: black;
+
 
 }
 
 a:visited {
   text-decoration: none;
-    color: black;
+
 }
 
 a:hover {
   font-weight: bold;
-    color: black;
 }
 
 a:active {
     text-decoration: none;
-    color: black;
+}
+
+nav {
+    margin:0 auto;
+    color: midnightblue;
+}
 
