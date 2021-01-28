@@ -32,7 +32,7 @@ def user_check():
 @app.route('/')
 def main():
     home = True
-    return render_template("index.html", user=user_check(), home=home)
+    return render_template("index1.html", user=user_check(), home=home)
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -67,7 +67,8 @@ def register():
                 con.close()
         return render_template("result.html", result=result, f_name=f_name)
     else:
-        return render_template("register.html", user=user_check())
+        register = True
+        return render_template("register.html", user=user_check(), register=register)
 
 
 
@@ -96,7 +97,8 @@ def log_in():
             flash("wrong password", "danger")
             return redirect(url_for("log_in"))
     else:
-        return render_template("log_in.html", user=user_check())
+        login = True
+        return render_template("log_in.html", user=user_check(), login=login)
 
 
 

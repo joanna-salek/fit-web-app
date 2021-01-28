@@ -1,42 +1,133 @@
 
 body {
-    background-size: auto;
-    font-family: "Ralway", sans-serif;
-    color: black;
-}
-
-.container-fluid {
     height: 100vh;
     width: 100%;
-    background-size: auto;
-    background: url("../back-ground.jpg");
+    background: url("../ov.png"), url("../back-ground.jpg");
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
- }
+    color: white;
+}
+
+#text {
+    padding: 10px;
+}
+
+#section1 {
+    height: 100vh;
+    width: 100%;
+}
+
+#section2 {
+    height: 100%;
+    width: 100%;
+}
+
+.banner .navbar{
+    margin: 2%;
+
+}
+
+.banner .navbar-brand{
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-left: 10%;
+    position: fixed;
+
+}
+
+.banner .nav{
+    margin-right: 10%;
+    position: fixed;
+    right: 0;
+}
+
+.banner .nav li a{
+    color: #b2c2bf
+
+}
+
+.banner .info {
+    margin-top: 15%;
+    transform: translateY(-15%);
+
+}
+
+.banner .info h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+
+.banner .info p{
+    font-size: 2em;
+    font-weight: 500;
+    color: #b2c2bf;
+    letter-spacing: 2px;
+}
+
+.banner .info a{
+    color: #ffffff;
+    background: #f4a688;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.banner .info a:hover{
+    background: #e0876a;
+}
+
+.index{
+    background: dimgray;
+
+}
+
+.first {
+    background-color: rgba(255, 255, 255, 0.2);
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.my-row{
+    color: white;
+    align-content: center;
+
+}
+
+.centered .my-row{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 a:link {
   text-decoration: none;
 
-
 }
 
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 
 }
 
 a:hover {
   font-weight: bold;
+
 }
 
 a:active {
     text-decoration: none;
+
 }
 
-nav {
-    margin:0 auto;
-    color: midnightblue;
-}
 
