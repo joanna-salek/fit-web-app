@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 
-auth = Blueprint("auth", __name__, template_folder=r"C:\Users\joann\PycharmProjects\fit_web_app\auth\templates", static_folder="static")
+auth = Blueprint("auth", __name__, template_folder=r"templates", static_folder="static")
 # configure app
 app = Flask(__name__)
 
