@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container h-100">
+    <div class="container-fluid h-100" style="margin-top: 17%">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-10 col-md-8 col-lg-6">
                 <form action="{{ url_for("bmi") }}" method="post" role="form">
                     <div class="container">
+                        <h2>Calculate your BMI</h2>
                         <div class="mb-3">
                            <label for="weight" class="form-label">Weight in kg</label>
                             <input type="text" class="form-control" name="weight">

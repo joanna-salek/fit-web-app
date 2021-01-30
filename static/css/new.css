@@ -24,34 +24,35 @@ body {
     width: 100%;
 }
 
-.banner .navbar{
-    margin: 2%;
-
-}
 
 .banner .navbar-brand{
     color: #ffffff;
     font-size: 1.5em;
     font-weight: 700;
     margin-left: 10%;
-    position: fixed;
+
 
 }
 
-.banner .nav{
+.banner .nav {
     margin-right: 10%;
     position: fixed;
     right: 0;
+    color: white;
 }
 
-.banner .nav li a{
-    color: #b2c2bf
+.banner .navbar-nav li a{
+    color: #b2c2bf;
+    float: right;
+    padding: 10px;
 
 }
 
 .banner .info {
-    margin-top: 15%;
-    transform: translateY(-15%);
+    margin-top: 25%;
+    transform: translateY(-25%);
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -95,38 +96,49 @@ body {
     display: block;
     margin: 10px;
     padding: 10px;
+
 }
 
 .my-row{
     color: white;
     align-content: center;
+}
+
+.my-container{
+    border: 10px;
+    height: 110vh;
+    padding: 10% 10%;
 
 }
 
 .centered .my-row{
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
 }
 
 a:link {
   text-decoration: none;
+    color: white;
+
 
 }
 
 a:visited {
     text-decoration: none;
+    color: white;
+
 
 }
 
 a:hover {
   font-weight: bold;
+    color: white;
 
 }
 
 a:active {
     text-decoration: none;
+    color: white;
 
 }
 
