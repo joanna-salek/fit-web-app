@@ -8,6 +8,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: white;
+    padding-top: 70px;
 }
 
 #text {
@@ -49,8 +50,8 @@ body {
 }
 
 .banner .info {
-    margin-top: 25%;
-    transform: translateY(-25%);
+    margin-top: 20%;
+    transform: translateY(-20%);
     margin-left: auto;
     margin-right: auto;
 
@@ -110,6 +111,7 @@ body {
     padding: 10% 10%;
 
 }
+
 
 .centered .my-row{
   position: relative;

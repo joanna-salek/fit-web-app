@@ -22,14 +22,14 @@
                 {% block content_2 %}
                     <p class="lead"></p>
                     <p>It is just right</p>
-                    <p><a class="btn btn-lg btn-success" style="color:white" href={{ url_for("diets")}} role="button">It is alright, maybe serniczek?</a>
+                    <p><a class="btn btn-lg btn-success" style="color:white" href={{ url_for("brownie")}} role="button">It is alright, maybe brownie?</a>
                     </p>
                 {% endblock content_2 %}
             {% else %}
                 {% block content_3 %}
                     <p class="lead"></p>
                     <p>It is to little, you need to gain weight</p>
-                    <p><a class="btn btn-lg btn-warning" style="color:white" href={{ url_for("diets")}} role="button">Gain weight now</a>
+                    <p><a class="btn btn-lg btn-warning" style="color:white" href={{ url_for("basic")}} role="button">Gain weight now</a>
                     </p>
                 {% endblock content_3 %}
             {% endif %}
