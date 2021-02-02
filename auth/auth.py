@@ -24,7 +24,7 @@ def user():
 
 @auth.route('/log-out')
 def log_out():
-    session.pop("email", None)
+    session.pop("user", None)
     flash("you have log-out successfully", "success")
     return redirect(url_for("log_in"))
 

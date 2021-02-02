@@ -70,8 +70,6 @@ def register():
         register = True
         return render_template("register.html", user=user_check(), register=register)
 
-
-
 @app.route('/log-in', methods=['POST', 'GET'])
 def log_in():
     if request.method == 'POST':

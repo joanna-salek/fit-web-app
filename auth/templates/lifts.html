@@ -1,17 +1,12 @@
-{% extends 'layout1.html' %}
+{% extends 'layout2.html' %}
 
 {% block head %}
-    <Title>Muscles</Title>
-    <div class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-        </nav>
-    </div>
-    <h1>Please fill your data</h1>
-
-    {{ user }}
 {% endblock %}
 
 {% block body %}
+    <h1>Please fill your data</h1>
+
+    {{ user }}
     <form>
         <select name="lift">
             <option value="deadlift">deadlift</option>

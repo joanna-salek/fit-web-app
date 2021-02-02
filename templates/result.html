@@ -1,15 +1,17 @@
 {% extends 'layout2.html' %}
 
 {% block head %}
-    {{ result }}
+{% endblock %}
+
+{% block body %}
+       {{ result }}
     {% if result == "sucess" %}
          <p>Congratulation {{ f_name }}, you have registered successfully</p>
+    {% elif result == "failure in database operations" %}
+        <p>Sorry failure in database operations</p>
     {% endif %}
     <p>
         <a href= {{ url_for("main")}}>Go to home page</a>
     </p>
-{% endblock %}
-
-{% block body %}
 
 {% endblock %}
