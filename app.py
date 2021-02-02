@@ -10,7 +10,9 @@ app = Flask(__name__)
 app.register_blueprint(auth, url_prefix="/user")
 
 
-mailgun_secret_key_value = os.environ.get('MAILGUN_SECRET_KEY', None)
+s_key = os.urandom(24)
+
+mailgun_secret_key_value = os.environ.get('MAILGUN_SECRET_KEY', s_key)
 app.config['SECRET_KEY'] = str(mailgun_secret_key_value)
 
 
@@ -27,12 +29,14 @@ def user_check():
     # check if user is logged in
     if session.get('logged_in'):
         return True
+    else:
+        return False
 
 
 @app.route('/')
 def main():
     home = True
-    return render_template("index1.html", user=user_check(), home=home, key= mailgun_secret_key_value)
+    return render_template("index1.html", user=user_check(), home=home)
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
