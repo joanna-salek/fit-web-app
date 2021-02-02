@@ -13,11 +13,17 @@ s_key = os.urandom(24)
 app.config['SECRET_KEY'] = str(s_key)
 
 
+
+def user_check():
+    # check if user is logged in
+    if session.get('logged_in'):
+        return True
+
 @auth.route('/')
 def user():
     if "user" in session:
         user = session["user"]
-        return render_template("lifts.html", user=user)
+        return render_template("lifts.html", user=user_check())
     else:
         return redirect(url_for("log_in"))
 
