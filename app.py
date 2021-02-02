@@ -27,7 +27,7 @@ def db_connection():
 
 def user_check():
     # check if user is logged in
-    if session.get('logged_in'):
+    if 'user' in session:
         return True
     else:
         return False
@@ -35,8 +35,7 @@ def user_check():
 
 @app.route('/')
 def main():
-    home = True
-    return render_template("index1.html", user=user_check(), home=home)
+    return render_template("index1.html", user=user_check())
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
