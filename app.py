@@ -9,9 +9,9 @@ from auth.auth import auth
 app = Flask(__name__)
 app.register_blueprint(auth, url_prefix="/user")
 
-s_key = os.urandom(24)
-app.config['SECRET_KEY'] = str(s_key)
 
+mailgun_secret_key_value = os.environ.get('MAILGUN_SECRET_KEY', None)
+app.config['SECRET_KEY'] = str(mailgun_secret_key_value)
 
 
 def db_connection():
@@ -32,7 +32,7 @@ def user_check():
 @app.route('/')
 def main():
     home = True
-    return render_template("index1.html", user=user_check(), home=home)
+    return render_template("index1.html", user=user_check(), home=home, key= mailgun_secret_key_value)
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
