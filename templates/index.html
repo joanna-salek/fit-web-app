@@ -1,41 +1,64 @@
 {% extends 'layout2.html' %}
 
 {% block head %}
-    <div class = "container">
-    <h3 class="text-muted">Made to be strong</h3>
-        <div class="jumbotron">
-            <h2>Programe your training</h2>
-            <p class="lead"></p>
-            <p><a class="btn btn-lg btn-success" style="color:white" href={{ url_for("register")}}>Sign up today</a>
-            </p>
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-8 offset-md-2 info text-center">
+        <h1 class="text-center">FIT WEB APP</h1>
+        <p class="text-center">Start Your Fitness Adventure Now</p>
+        <div id="navigation">
+          <span><a class="btn btn-md" href="#section2">GET STARTED</a></span>
         </div>
     </div>
 {% endblock %}
 
-{% block body %}
-    <div class="container">
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4><a href={{ url_for("basic")}}>You feel weak?</a></h4>
-                    <p>Find out what exercises everybody should perform everyday</p>
+{% block section %}
+    <div class="container" id="section2">
 
-                    <h4><a href={{ url_for("diets")}}>You want to loose weight quickly?</a></h4>
-                    <p>Loosing weight can be quite easy. One thing you need to do is follow this rules. Find out 5 best diets that can change your life</p>
-
-                    <h4><a href={{ url_for("register")}}>How strong is your body?</a></h4>
-                    <p>Enter your gym results and get personalize exercises</p>
-                </div>
-
-                <div class="col-lg-6">
-                    <h4><a href={{ url_for("orm")}}>One rep max calculator</a></h4>
-                    <p>Calculate your one rep max based on your max reps in squat, deadlift or bench press</p>
-
-                    <h4><a href={{ url_for("bmi")}}>BMI calculator</a></h4>
-                    <p>Check out if your body weight is correct</p>
-
-                    <h4><a href={{ url_for("brownie")}}>Great recipe for fit brownie</a></h4>
-                    <p>OMG you have to try this one</p>
-                </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/pull-up.jpg" alt="IMAGE">
             </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/brownie.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/measure.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/pull-up.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/pull-up.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/pull-up.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
+        <div class="gallery-container">
+            <div class="image">
+                <img src="../static/pull-up.jpg" alt="IMAGE">
+            </div>
+            <div class="text">Nature</div>
+        </div>
     </div>
+
+
 {% endblock %}
