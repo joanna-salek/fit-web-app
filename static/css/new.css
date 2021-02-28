@@ -1,14 +1,39 @@
-
-body {
-    height: auto;
+htm{
+    padding: 0;
+    margin: 0;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+
+#basic{
+    height: 100%;
+    width: auto;
     background: url("../ov.png"), url("../back-ground.jpg");
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: white;
-    padding-top: 70px;
+    font-family: 'Lora', sans-serif;
+    word-spacing: 3px;
+
+}
+
+#brownie{
+    height: 100%;
+    width: auto;
+    background: url("../ov.png"), url("../brownie.jpg");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Lora', sans-serif;
+    word-spacing: 3px;
+
 }
 
 #text {
@@ -21,10 +46,17 @@ body {
 }
 
 #section2 {
+    padding-top: 5%;
     height: 100%;
     width: 100%;
-}
 
+}
+#section4 {
+    padding-top: 10%;
+    height: 100%;
+    width: 100%;
+
+}
 
 .banner .navbar-brand{
     color: #ffffff;
@@ -35,11 +67,16 @@ body {
 
 }
 
+
 .banner .nav {
     margin-right: 10%;
     position: fixed;
     right: 0;
     color: white;
+
+}
+.navbar-custom {
+    background-color: rgb(21, 18, 18);
 }
 
 .banner .navbar-nav li a{
@@ -50,8 +87,8 @@ body {
 }
 
 .banner .info {
-    margin-top: 20%;
-    transform: translateY(-20%);
+    margin-top: 25%;
+    transform: translateY(-25%);
     margin-left: auto;
     margin-right: auto;
 
@@ -89,37 +126,125 @@ body {
 
 }
 
-.my-row .first {
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    height: auto;
+.first {
     text-align: center;
-    display: block;
     margin: 10px;
+    margin-bottom: 30px;
     padding: 10px;
+
 }
 
-.first > img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+
+.banner .recipe-info {
+    margin-top: 25%;
+    transform: translateY(-25%);
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-.my-row{
-    color: white;
-    align-content: center;
+.banner .recipe-info a{
+    color: #ffffff;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: x-large;
 }
 
+
+.recipe-container{
+    border-color: white;
+    border-radius: 5px;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.recipe-image .image-food{
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+
+}
+#brownie{
+    height: 80%;
+    width: auto;
+
+}
+
+
+.quick-info{
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.recipe-quick-info{
+    padding: 20px;
+    border-radius: 5px;
+    border-style: ridge;
+    border-width: 1px;
+    border-color: white;
+
+}
+
+.quick-info ul{
+    list-style: none;
+    font-size: 22px;
+    line-height: 300%;
+}
+
+.recipe-ingredients {
+    margin-top: 5%;
+
+}
+.recipe-ingredients ul{
+    list-style: none;
+    font-size: 20px;
+    line-height: 300%;
+    text-align: left;
+}
+
+.recipe-preparation {
+    margin-top: 5%;
+    border-left:1em solid transparent;
+    border-right:1em solid transparent;
+
+}
+.recipe-preparation ul{
+    list-style: none;
+    font-size: 18px;
+    line-height: 300%;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+.my-row .first .im{
+    background-image: url("../pull-up.jpg");
+
+}
 .my-container{
     border: 10px;
-    height: 110vh;
+    height: 100vh;
     padding: 0 10%;
+
+}
+.footer p{
+    margin-bottom: 0;
+}
+#footer{
+    margin-top: 50px;
+    background-color: rgb(21, 18, 18);
+    line-height: 200%;
+    padding: 2%;
+    padding-bottom: 3%;
+
+
 }
 
-
-.centered .my-row{
-  position: relative;
-
+.f-con{
+    margin: 10px;
+    padding-top: 5%;
 }
 
 a:link {

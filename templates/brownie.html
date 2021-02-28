@@ -1,44 +1,80 @@
 {% extends 'layout2.html' %}
 
 {% block head %}
-    <div class = "container"
-         <p>Here will be brownie recipe</p>
-    </div>
-
-
 {% endblock %}
 
 {% block body %}
-    <ul title="składniki">
-        <p>Ingredients</p>
-        <li>
-            chocolate
-        </li>
-        <li>
-            red beans
-        </li>
-        <li>
-            butter
-        </li>
-        <li>
-            honey
-        </li>
-    </ul>
-    <ul title="wykonanie">
-        <p>preparation</p>
-        <li>
-            put your ingredients into bowl and mix them all together - yes it is that simple
-        </li>
-        <li>
-            put it in the owen and bake it for 1 hour at 200°C
-        </li>
-        <li>
-            after some time check if the pie is ready with fork, if the pie is not sticking to fork it means it is ready
-        </li>
-        <li>
-            ENJOY
-        </li>
-    </ul>
+    <div class="col-md-8 offset-md-2 text-center recipe-info" id="section3">
+        <h1 class="text-center">Super-Chocolate Fit Brownie</h1>
+        </br>
+        <p class="text-center" style="font-size: large">This intense chocolate fit brownie make you feel real good
+            after just one piece</p>
+        <p class="text-center" style="font-size: large">One piece provides you only with 160 kcal and as much as 10 g of protein</p>
 
-</div>
+
+        <div id="navigation">
+            <span><a class="btn btn-md" href="#section4">LET'S COOK</a></span>
+        </div>
+    </div>
+{% endblock %}
+{% block section %}
+    <div class="container-fluid">
+    <div class="row justify-content-center align-items-center" id="section4">
+        <div class="col-lg-5 col-sm-10 offset-1 recipe-image">
+            <img class="img-fluid" src="../static/kanwa.png" style="padding-right: 10%; " alt="brownie" id="brownie">
+        </div>
+        <div class="col-lg-5 col-sm-10 recipe-container quick-info">
+            <div class="recipe-quick-info">
+                <ul title="Recipe Info">
+                    <li>Prep Time:<small><i> 15 minutes</i></small></li>
+                    <li>Bake Time:<small><i> 40 minutes</i></small></li>
+                    <li>Total Time:<small><i> 90 minutes</i></small></li>
+                    <li>Servings:<small><i> 10 pieces</i></small></li>
+                    <li>Kcal per piece:<small><i> 160 kcal</i></small></li>
+                    <li>Bake Temperature:<small><i> 180&deg;C</i></small></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-1 col-sm-1 recipe-container quick-info"></div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-sm-8 offset-1 recipe-container recipe-ingredients justify-content-center">
+            <h1 style="line-height: 300%; text-align: left">Ingredients</h1>
+            <div class="row justify-content-center">
+                <ul title="Ingredients">
+                    <li><i class="fas fa-utensils"></i>&emsp; Chocolate &ensp;-&ensp; 100 gram</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Red Beans &ensp;-&ensp; 2 cans</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Honey &ensp;-&ensp; 100 ml</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Eggs &ensp;-&ensp; 2</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Erythritol &ensp;-&ensp; 60 gram</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Cacao &ensp;-&ensp; 25 gram</li>
+                    <li><i class="fas fa-utensils"></i>&emsp; Baking powder &ensp;-&ensp; 12 gram</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-8 recipe-container recipe-preparation justify-content-left">
+            <h1 style="line-height: 300%; text-align: left">Preparation</h1>
+            <div class="row justify-content-center">
+                <ul title="Preparation">
+                    <li><i class="fas fa-circle"></i>&emsp; Blend beans, eggs, honey, cacao, baking powder and
+                        erythritol together until smooth.
+                    </li>
+                    <li><i class="fas fa-circle"></i>&emsp; Dissolve bar of chocolate in a water bath
+                        and half of it add to the mass carefully, the other half leave for chocolate glaze.
+                    </li>
+
+                    <li><i class="fas fa-circle"></i>&emsp; Pour the mass into a mold and bake at 180 degrees
+                        for 40 minutes.
+                    </li>
+
+                    <li><i class="fas fa-circle"></i>&emsp; Left the cake for cooling for 30 minutes and after pour
+                        the rest of chocolate glaze on the top.
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock %}

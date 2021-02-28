@@ -133,7 +133,7 @@ def diets():
 @app.route('/fit_brownie')
 def brownie():
     user = True if session.get('logged_in') else False
-    return render_template("brownie.html", user=user_check())
+    return render_template("brownie.html", user=user_check(), info="brownie")
 
 
 
