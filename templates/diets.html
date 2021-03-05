@@ -1,51 +1,96 @@
 {% extends 'layout2.html' %}
 
-{% block head %}
-    <div class = "container">
-        <div class="header">
-            <h2 class="text-muted">5 best diets to loose weight</h2>
-        </div>
-        <div class="jumbotrontext-muted">
-            <h3>You must rember there is no such a thing as "magic" diet, only way is simply eat less calories</h3>
-            <p><h5>Below you can find 5 diets for different calories/proteins intake</h5></p>
-        </div>
-    </div>
-    <div class="container">
-            <img src="../static/fit.jpg" alt="Gym" type="image" align="center" style="height: 500px; width: 1162px;">
-    </div>
-{% endblock head %}
 
 {% block body %}
-    <div class="container">
+    <div class="row">
+        <div class="col-lg-7 col-md-9 col-11 info-diets">
+            <div class="container-fluid calorie">
+                <h2 style="text-align: center">Calculate your daily calorie intake <strong>{{ calories }}</strong></h2>
+                <form class="form-inline" action="{{ url_for("diets") }}" method="POST">
+                    <div class="container p-3" style="text-align: left">
+                        <div class="row">
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="weight" class="form-label">Weight in kg</label>
+                                <input type="number" class="form-control" placeholder="70" id="Weight" name="weight">
+                            </div>
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="height" class="form-label">Height in cm</label>
+                                <input type="number" class="form-control" placeholder="170" id="height" name="height">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="number" class="form-control" placeholder="25" id="Age" name="age">
+                            </div>
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="gender" class="form-label">Gender</label>
+                                <select type="text" class="form-control" id="gender" name="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="activity" class="form-label">Daily Activity</label>
+                            <select class="form-control" id="activity" name="activity">
+                                <option>Sedentary - little or no exercise</option>
+                                <option>Lightly active - train for 1-3 day a week</option>
+                                <option>Moderately active - train for 3-5 day a week</option>
+                                <option>Very active - train for 6-7 day a week</option>
+                                <option>Extra active - Athlete job</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="goal" class="form-label">What's your goal</label>
+                            <select class="form-control" id="goal" name="goal">
+                                <option>Loose weight</option>
+                                <option>Maintain weight</option>
+                                <option>Gain weight</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary my-2 col-lg-2 col-4">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <img src="../static/diet1.jpg" class="Responsive image" alt="Diet_1500" style="max-height: 500px; max-width: 500px;">
-                    <h4>1500 calories, 90 grams of protein</h4>
-                    <p>Golden standard. It will help strengthen your core</p>
+{% block section %}
+    <div class="container" id="section2">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="../static/diet1.jpg" class="image-fluid" alt="Diet_1500"
+                     style="max-height: 500px; max-width: 500px;">
+                <h4>1500 calories, 90 grams of protein</h4>
+                <p>Golden standard. It will help strengthen your core</p>
 
-                    <img src="../static/diet2.jpg" class="Responsive image" alt="Diet_2000" style="max-height: 500px; max-width: 500px;">
-                    <h4>2000 calories, 105 grams of protein</h4>
-                    <p>If it nice glutes you want, you should try it</p>
+                <img src="../static/diet2.jpg" class="image-fluid" alt="Diet_2000"
+                     style="max-height: 500px; max-width: 500px;">
+                <h4>2000 calories, 105 grams of protein</h4>
+                <p>If it nice glutes you want, you should try it</p>
 
-                    <img src="../static/diet3.jpg" class="Responsive image" alt="Diet_2500" style="max-height: 500px; max-width: 500px;">
-                    <h4>2500 calories, 120 grams of protein</h4>
-                    <p>Best compound exercise for upper body.</p>
-                </div>
-
-                <div class="col-lg-6">
-                    <img src="../static/diet4.jpg" class="Responsive image" alt="Diet_3000" style="max-height: 500px; max-width: 500px;">
-                    <h4>3000 calories, 140 grams of protein</h4>
-                    <p>Strong upper back muscles are sexy and you know it</p>
-
-                    <img src="../static/diet5.jpg" class="Responsive image" alt="Diet_3500" style="max-height: 500px; max-width: 500px;">
-                    <h4>3500 calories, 155 grams of protein</h4>
-                    <p>Really nice for your shoulder, just do it</p>
-
-                </div>
+                <img src="../static/diet3.jpg" class="image-fluid" alt="Diet_2500"
+                     style="max-height: 500px; max-width: 500px;">
+                <h4>2500 calories, 120 grams of protein</h4>
+                <p>Best compound exercise for upper body.</p>
             </div>
 
-            <footer class="footer">
-                <p>&copy; Joanna Sałek</p>
-            </footer>
-{% endblock body %}
+            <div class="col-lg-6">
+                <img src="../static/diet4.jpg" class="Responsive image" alt="Diet_3000"
+                     style="max-height: 500px; max-width: 500px;">
+                <h4>3000 calories, 140 grams of protein</h4>
+                <p>Strong upper back muscles are sexy and you know it</p>
+
+                <img src="../static/diet5.jpg" class="Responsive image" alt="Diet_3500"
+                     style="max-height: 500px; max-width: 500px;">
+                <h4>3500 calories, 155 grams of protein</h4>
+                <p>Really nice for your shoulder, just do it</p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,14 +1,14 @@
-from flask import Flask, render_template, request, flash, redirect, url_for, session, Blueprint
-from flask_login import current_user
-import sqlite3
 import os
+import sqlite3
+
+from flask import Flask, render_template, request, flash, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
+
 from auth.auth import auth
 
 # configure app
 app = Flask(__name__)
 app.register_blueprint(auth, url_prefix="/user")
-
 
 s_key = os.urandom(24)
 
@@ -36,6 +36,7 @@ def user_check():
 @app.route('/')
 def main():
     return render_template("index1.html", user=user_check())
+
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -73,6 +74,7 @@ def register():
         register = True
         return render_template("register.html", user=user_check(), register=register)
 
+
 @app.route('/log-in', methods=['POST', 'GET'])
 def log_in():
     if request.method == 'POST':
@@ -102,7 +104,6 @@ def log_in():
         return render_template("log_in.html", user=user_check(), login=login)
 
 
-
 @app.route('/basic_training')
 def basic():
     return render_template("basic.html", user=user_check())
@@ -115,26 +116,54 @@ def bmi_form():
 
 @app.route('/BMI', methods=['POST', 'GET'])
 def bmi():
-    if request.method == "POST" :
+    if request.method == "POST":
         weight = request.form.get("weight")
         height = request.form.get("height")
         bmi = float(weight) / ((float(height) / 100) ** 2)
         bmi = round(bmi, 2)
         return render_template("BMI.html", bmi=bmi, user=user_check())
     else:
-        return render_template("BMI-form.html", user=user_check() )
+        return render_template("BMI-form.html", user=user_check())
 
-@app.route('/diets')
+
+@app.route('/diets', methods=['POST', 'GET'])
 def diets():
-    user = True if session.get('logged_in') else False
-    return render_template("diets.html", user=user_check())
+    if request.method == "POST":
+        weight = request.form.get("weight")
+        height = request.form.get("height")
+        gender = request.form.get("gender")
+        age = request.form.get("age")
+        active = request.form.get("activity")
+        goal = request.form.get("goal")
+        g_factor = 5
+        if gender == "Female":
+            g_factor = -161
+
+        a_factor = 1.2
+        if active == "Lightly active - train for 1-3 day a week":
+            a_factor = 1.375
+        elif active == "Moderately active - train for 3-5 day a week":
+            a_factor = 1.55
+        elif active == "Very active - train for 6-7 day a week":
+            a_factor = 1.725
+        elif active == "Extra active - Athlete job":
+            a_factor = 1.9
+
+        calories = (10 * float(weight) + 6.25 * float(height) - (5 * float(age)) + g_factor) * a_factor
+
+        if goal == "Loose weight":
+            calories -= 300
+        elif goal == "Gain weight":
+            calories += 300
+
+        return render_template("diets.html", calories=calories, user=user_check())
+    else:
+        return render_template("diets.html", user=user_check())
 
 
 @app.route('/fit_brownie')
 def brownie():
-    user = True if session.get('logged_in') else False
     return render_template("brownie.html", user=user_check(), info="brownie")
-
 
 
 @app.route('/orm', methods=['POST', 'GET'])
@@ -152,8 +181,3 @@ def orm():
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
     app.register_blueprint(auth, url_prefix="/user")
-
-
-
-
-
