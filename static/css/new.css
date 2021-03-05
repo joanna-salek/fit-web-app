@@ -155,7 +155,7 @@
 }
 
 .banner .calorie{
-    background-color: rgb(100, 100, 100, 0.3);
+    background-color: rgba(100, 100, 100, 0.3);
     border-color: white;
     border-radius: 5px;
     background-position: top;
