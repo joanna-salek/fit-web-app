@@ -3,11 +3,11 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-lg-7 col-md-9 col-11 info-diets">
-            <div class="container-fluid calorie">
-                <h2 style="text-align: center">Calculate your daily calorie intake <strong>{{ calories }}</strong></h2>
-                <form class="form-inline" action="{{ url_for("diets") }}" method="POST">
+        <div class="col-lg-7 col-md-9 col-12 info-diets">
+            <div class="container-fluid box cal">
+                <form action="{{ url_for("diets") }}" method="POST">
                     <div class="container p-3" style="text-align: left">
+                        <h2 style="text-align: center">Calculate your daily calorie intake</h2></br>
                         <div class="row">
                             <div class="form-group col-md-6 mb-3">
                                 <label for="weight" class="form-label">Weight in kg</label>
@@ -49,8 +49,15 @@
                                 <option>Gain weight</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary my-2 col-lg-2 col-4">Submit</button>
+                        <div class="row">
+                            <div class="form-group col-lg-2 col-4 col-md-2 my-2">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            {% if calories is defined %}
+                                <div class="form-group col-lg-10 col-8 col-md-8 my-2">
+                                    <h4 style="color: rgb(218, 165, 32)">Your goal is {{ calories }} kcal</h4>
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
                 </form>

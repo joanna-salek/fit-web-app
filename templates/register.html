@@ -6,12 +6,23 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid h-100">
-        <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-10 col-md-8 col-lg-4 first">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6 box reg_log">
                 <form action="{{ url_for("register") }}" method="post" role="form">
-                    <div class="container rounded p-3 my-5 first">
-                        <h2 class="text-center font-weight-bold my-3">Create an account</h2>
+                    <div class="container" style="text-align: left">
+                        <h2 class="text-center font-weight-bold">Create an account</h2>
+                        </br>
+                        <div class="row">
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="f_name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" name='f_name'>
+                            </div>
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="l_name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" name="l_name">
+                            </div>
+                        </div>
                         <div class="mb-3">
                             <label for="e-mail" class="form-label">Email Address</label>
                             <input type="email" class="form-control" name="e-mail">
@@ -23,18 +34,6 @@
                         <div class="mb-3">
                             <label for="c_psw" class="form-label">Connfirm Password</label>
                             <input type="password" class="form-control" name="c_psw">
-                        </div>
-                        <div class="mb-3">
-                            <label for="f_name" class="form-label">First Name</label>
-                            <input type="text" class="form-control" name='f_name'>
-                        </div>
-                        <div class="mb-3">
-                            <label for="l_name" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" name="l_name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="b_day" class="form-label">Birthday</label>
-                            <input type="date" class="form-control" name="b_day">
                         </div>
                         <div>
                             <button type="submit" class="btn btn-primary my-2 col-12">Submit</button>

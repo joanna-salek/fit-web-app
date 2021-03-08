@@ -8,51 +8,65 @@
         <h1 class="text-center">FIT WEB APP</h1>
         <p class="text-center">Start Your Fitness Adventure Now</p>
         <div id="navigation">
-          <span><a class="btn btn-md" href="#section2">GET STARTED</a></span>
+            <span><a class="btn btn-md" href="#section2">GET STARTED</a></span>
         </div>
     </div>
 {% endblock %}
 
 {% block section %}
     <div class="container-fluid my-container" id="section2">
-        <div class="row my-row">
-            <div class="col-sm rounded first">
-                 <div class="image-container">
-                     <a href={{ url_for("register")}}><img class="img-fluid" id="Library" src="../static/pull-up.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("basic")}}>You feel weak?</a></div>
+        <div class="row my-row align-items-center justify-content-center">
+            <div class="col-lg-6 col-12 first">
+                <a href={{ url_for("register") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/pull-up.jpg')">
+                        <div class="centered">Personalize your training</div>
+                        <div class="img-description">Register now and improve your training</div>
+                    </div>
+                </a>
             </div>
-            <div class="col-sm rounded first">
-                 <div class="image-container">
-                     <a href={{ url_for("basic")}}><img class="img-fluid" src="../static/strict-press.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("basic")}}>You feel weak?</a></div>
-            </div>
-            <div class="col-sm rounded first">
-                 <div class="image-container">
-                     <a href={{ url_for("bmi") }}><img class="img-fluid" src="../static/measure.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("bmi") }}>BMI</a></div>
+            <div class="col-lg-6 col-12 first">
+                <a href={{ url_for("basic") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/biceps.jpg')">
+                        <div class="centered">You feel weak?</div>
+                        <div class="img-description">Find out what are the best universal exercises</div>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="row my-row">
-            <div class="col-sm rounded first">
-                 <div class="image-container">
-                     <a href={{ url_for("brownie")}}><img class="img-fluid" src="../static/brownie.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("brownie")}}>Great recipe for fit brownie</a></div>
+        <div class="row my-row align-items-center justify-content-center">
+            <div class="col-lg-6 col-12 first">
+                <a href={{ url_for("bmi") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/measure.jpg')">
+                        <div class="centered">What is your BMI?</div>
+                        <div class="img-description">Quickly calculate your body mass index</div>
+                    </div>
+                </a>
             </div>
-            <div class="col-sm rounded first">
-                <div class="image-container">
-                    <a href={{ url_for("diets")}}><img class="img-fluid" src="../static/weight.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("diets")}}>Loose weight quickly</a></div>
+            <div class="col-lg-6 first">
+                <a href={{ url_for("brownie") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/brownie.jpg')">
+                        <div class="centered">Perfect chocolate brownie</div>
+                        <div class="img-description">Quick and easy recipe only 160kcal per piece</div>
+                    </div>
+                </a>
             </div>
-            <div class="col-sm rounded first">
-                 <div class="image-container">
-                     <a href={{ url_for("orm") }}><img class="img-fluid" src="../static/squat1.jpg" alt="IMAGE"></a>
-                </div>
-                <div class="centered"><a href={{ url_for("orm") }}>ORM</a></div>
+        </div>
+        <div class="row my-row align-items-center justify-content-center">
+            <div class="col-lg-6 first">
+                <a href={{ url_for("diets") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/weight.jpg')">
+                        <div class="centered">Loose weight quickly</div>
+                        <div class="img-description">Calculate your calorie intake and get diet plan</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 first">
+                <a href={{ url_for("orm") }}>
+                    <div class="image-container" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('../static/squat1.jpg')">
+                        <div class="centered">One rep max calculator</div>
+                        <div class="img-description">Find out what is your one rep max</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

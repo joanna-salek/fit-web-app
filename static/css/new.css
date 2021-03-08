@@ -89,14 +89,15 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .banner .info-diets {
-    margin-top: 100px !important;
+    margin-top: 300px !important;
 }
 }
 
 .banner .info-diets {
-    margin-top: 10%;
+    margin-top: 25%;
+    transform: translateY(-25%);
     margin-left: auto;
     margin-right: auto;
 }
@@ -106,6 +107,7 @@
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 2px;
+
 }
 
 .banner .info-diets h1{
@@ -113,6 +115,7 @@
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 2px;
+    font-family: 'Lobster', cursive;
 }
 
 
@@ -128,6 +131,8 @@
     font-weight: 500;
     color: #b2c2bf;
     letter-spacing: 2px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .banner .info a{
@@ -140,7 +145,6 @@
 
 .banner .info-diets a{
     color: #ffffff;
-    background: #f4a688;
     margin-top: 10px;
     font-weight: bold;
     font-size: large;
@@ -150,12 +154,8 @@
     background: #e0876a;
 }
 
-.banner .info-diets a:hover{
-    background: #e0876a;
-}
-
-.banner .calorie{
-    background-color: rgba(100, 100, 100, 0.3);
+.banner .box{
+    background-color: rgba(200, 200, 200, 0.1);
     border-color: white;
     border-radius: 5px;
     background-position: top;
@@ -163,20 +163,22 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 20px;
+
+}
+
+.cal {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.reg_log {
+    margin-top: 12%;
+    padding: 15px;
 
 }
 
 .index{
     background: dimgray;
-
-}
-
-.first {
-    text-align: center;
-    margin: 10px;
-    margin-bottom: 30px;
-    padding: 10px;
 
 }
 
@@ -220,6 +222,7 @@
 }
 
 
+
 .quick-info{
     padding: 10px;
     padding-top: 20px;
@@ -231,6 +234,8 @@
     border-style: ridge;
     border-width: 1px;
     border-color: white;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -265,10 +270,43 @@
     margin-bottom: 10%;
 }
 
-.my-row .first .im{
-    background-image: url("../pull-up.jpg");
+
+.image-container{
+    min-height: 300px;
+    position: relative;
+    background-size: cover;
+    padding-top: 30%;
+    margin: 20px;
+
 
 }
+.centered{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    opacity: revert;
+    margin: 10px;
+}
+
+
+.image-container:hover{
+    opacity: 0.7;
+    padding-top: 20%;
+}
+
+.image-container .img-description{
+    visibility: hidden;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.image-container:hover .img-description{
+    visibility: visible;
+}
+
+
 .my-container{
     border: 10px;
     height: 100vh;
