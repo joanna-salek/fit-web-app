@@ -1,6 +1,19 @@
 # Fitness web application
-## Created to present some important informations about fitness and nutrition. 
-### For logged in users personalize trening will be generated based on their personal information provided.
 
-### Application was deployed on heroku (still in progress), simply enter this link:
-### https://fit-web-app.herokuapp.com/
+## Application is using:
+* FLASK 1.1.2
+* PYTHON 3
+* SQLAlchemy
+
+## Requirements instalation:
+#### Install requirements using pip in project directory
+```python
+$ pip install -r requirements.txt
+```
+
+## Descryption:
+#### Created to present some important informations about fitness and nutrition. Website contain fitness blog, diet and traing plans, user account, and many fitness calcucaltors. 
+
+
+## Visit website by clicking link below 
+ https://fit-web-app.herokuapp.com/
