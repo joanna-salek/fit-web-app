@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/new.css">
 </head>
 {% if info is defined %}
@@ -29,7 +30,7 @@
     <div class="header">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-md fixed-top navbar-expand-lg navbar-dark navbar-custom">
+                <nav class="navbar navbar-md navbar-expand-lg navbar-dark navbar-custom">
                     <a class="navbar-brand" href={{ url_for("main") }}>STRENGTH</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -62,16 +63,20 @@
                 </nav>
             </div>
         </div>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <ul class=flashes style="list-style-type: none">
-                    {% for category, message in messages %}
-                        <li class="alert alert-{{ category }}">{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
-        {% block body %}{% endblock %}
+        <div class="col-12">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class=flashes style="list-style-type: none">
+                        {% for category, message in messages %}
+                            <li class="alert alert-{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="block">
+            {% block body %}{% endblock %}
+        </div>
     </div>
 </div>
 

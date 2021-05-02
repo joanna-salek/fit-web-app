@@ -46,8 +46,7 @@ def register():
         c_psw = request.form.get("c_psw")
         f_name = request.form.get("f_name")
         l_name = request.form.get("l_name")
-        b_day = request.form.get("b_day")
-        if not e_mail or not s_psw or not c_psw or not f_name or not l_name or not b_day:
+        if not e_mail or not s_psw or not c_psw or not f_name or not l_name:
             flash("you must fill all boxes", "danger")
             return redirect(url_for("register"))
         elif not check_password_hash(s_psw, c_psw):
@@ -57,8 +56,8 @@ def register():
             con = db_connection()
             try:
                 c = con.cursor()
-                c.execute('''INSERT INTO users (psw, email, f_name, l_name, b_day)
-                                     VALUES (?, ?, ?, ?, ?)''', (s_psw, e_mail, f_name, l_name, b_day))
+                c.execute('''INSERT INTO users (psw, f_name, l_name, email)
+                                     VALUES (?, ?, ?, ?)''', (s_psw, f_name, l_name, e_mail))
                 con.commit()
                 result = "sucess"
             except sqlite3.IntegrityError:
@@ -160,6 +159,29 @@ def diets():
     else:
         return render_template("diets.html", user=user_check())
 
+@app.route('/diet1500')
+def diet1500():
+    return render_template("diet1500.html", user=user_check())
+
+@app.route('/diet2000')
+def diet2000():
+    return render_template("diet2000.html", user=user_check())
+
+
+@app.route('/diet2500')
+def diet2500():
+    return render_template("diet2500.html", user=user_check())
+
+
+@app.route('/diet3000')
+def diet3000():
+    return render_template("diet3000.html", user=user_check())
+
+
+@app.route('/diet3500')
+def diet3500():
+    return render_template("diet3500.html", user=user_check())
+
 
 @app.route('/fit_brownie')
 def brownie():
@@ -176,6 +198,7 @@ def orm():
         return render_template("orm.html", orm=orm, user=user_check())
     else:
         return render_template("orm-form.html", user=user_check())
+
 
 
 if __name__ == '__main__':

@@ -1,12 +1,10 @@
 {% extends 'layout2.html' %}
 
 {% block head %}
-    <Title>Muscles</Title>
-    <h1>Log in</h1>
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid" style="margin-top: 10%;">
+    <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-md-10 col-lg-4">
                 <form action="{{ url_for("log_in") }}" method="POST">
