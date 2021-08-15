@@ -355,6 +355,25 @@
     margin: 10px;
     padding-top: 5%;
 }
+.diet-days{
+    padding: 0;
+
+}
+
+.list-group-item{
+    background-color: rgb(16, 15, 15);
+    text-align: center;
+}
+
+.list-group-item.active{
+    background-color: #3c444cd9;
+    border: none;
+}
+.list-group-item-action:hover{
+    background-color: #3c444cd9;
+    color: white;
+
+}
 
 
 a:link {
@@ -385,6 +404,10 @@ ul.flashes{
     margin: 0;
     padding: 0;
     margin-top: 60px;
+}
+
+.alert{
+    padding: 0.75rem 0.75rem;
 }
 
 

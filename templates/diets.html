@@ -51,27 +51,7 @@
                         </div>
                         <div class="row">
                             {% if calories is defined %}
-                                {% if calories <= 1750 %}
-                                    <div id="navigation">
-                                        <span><a class="btn btn-md" href='{{ url_for("diet1500") }}' style=" background: rgb(255, 140, 32);">{{ calories }} kcal - GET YOUR DIET</a></span>
-                                    </div>
-                                {% elif (calories <= 2250) and (calories > 1750) %}
-                                     <div id="navigation">
-                                        <span><a class="btn btn-md" href='{{ url_for("diet2000") }}' style=" background: rgb(255, 140, 32);">{{ calories }} kcal - GET YOUR DIET</a></span>
-                                    </div>
-                                {% elif (calories <= 2750) and (calories > 2250) %}
-                                     <div id="navigation">
-                                        <span><a class="btn btn-md" href='{{ url_for("diet2500") }}' style=" background: rgb(255, 140, 32);">{{ calories }} kcal - GET YOUR DIET</a></span>
-                                    </div>
-                                {% elif (calories <= 3250) and (calories > 2750) %}
-                                     <div id="navigation">
-                                        <span><a class="btn btn-md" href='{{ url_for("diet3000") }}' style=" background: rgb(255, 140, 32);">{{ calories }} kcal - GET YOUR DIET</a></span>
-                                    </div>
-                                {% elif (calories <= 3750) and (calories > 3250) %}
-                                     <div id="navigation">
-                                        <span><a class="btn btn-md" href='{{ url_for("diet3500") }}' style=" background: rgb(255, 140, 32);">{{ calories }} kcal - GET YOUR DIET</a></span>
-                                    </div>
-                                {% endif %}
+                                <div>{{ calories }}</div>
                             {% else %}
                                 <div class="form-group col-lg-2 col-4 col-md-2 my-2">
                                     <button type="submit" class="btn btn-primary">Submit</button>

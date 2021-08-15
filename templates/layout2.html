@@ -63,17 +63,7 @@
                 </nav>
             </div>
         </div>
-        <div class="col-12">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    <ul class=flashes style="list-style-type: none">
-                        {% for category, message in messages %}
-                            <li class="alert alert-{{ category }}">{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
-        </div>
+
         <div class="block">
             {% block body %}{% endblock %}
         </div>
@@ -89,11 +79,11 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12" style="text-align: center">
-                                <p class="h5"><strong>STRENGTH</strong></p>
+                                <p class="h5"><a href={{ url_for("main") }}><strong>STRENGTH</strong></a></p>
                             </div>
                             <div class="col-10">
-                                <img class="img-fluid" style="padding-top: 15px" src="../static/kettel.png"
-                                     alt="Kettlball">
+                                <a href={{ url_for("main") }}><img class="img-fluid" style="padding-top: 15px" src="../static/kettel.png"
+                                                                   alt="Kettlball"></a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +91,7 @@
                 <div class="col-lg-3 col-md-5 col-5 f-con">
                     <h4>Menu</h4>
                     <p><a href={{ url_for("brownie") }}>Recipes</a></p>
-                    <p><a href={{ url_for("diets") }}>Diets</a></p>
+                    <p><a href={{ url_for("diets") }}>Daily calory intake</a></p>
                     <p><a href={{ url_for("bmi") }}>BMI - Body Mass Index</a></p>
                     <p><a href={{ url_for("orm") }}>ORM - One Rep Max calculator</a></p>
                 </div>

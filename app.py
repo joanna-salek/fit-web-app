@@ -32,6 +32,9 @@ def user_check():
     else:
         return False
 
+def my_round(x, base=50):
+    return base * round(float(x) / base)
+
 
 @app.route('/')
 def main():
@@ -148,39 +151,20 @@ def diets():
         elif active == "Extra active - Athlete job":
             a_factor = 1.9
 
-        calories = (10 * float(weight) + 6.25 * float(height) - (5 * float(age)) + g_factor) * a_factor
+        calories = my_round((10 * float(weight) + 6.25 * float(height) - (5 * float(age)) + g_factor) * a_factor)
 
         if goal == "Loose weight":
-            calories -= 300
+            calories -= 500
         elif goal == "Gain weight":
-            calories += 300
+            calories += 500
 
-        return render_template("diets.html", calories=calories, user=user_check())
+        return render_template("diets_result.html", calories=calories, user=user_check())
     else:
         return render_template("diets.html", user=user_check())
 
-@app.route('/diet1500')
+@app.route('/personal')
 def diet1500():
-    return render_template("diet1500.html", user=user_check())
-
-@app.route('/diet2000')
-def diet2000():
-    return render_template("diet2000.html", user=user_check())
-
-
-@app.route('/diet2500')
-def diet2500():
-    return render_template("diet2500.html", user=user_check())
-
-
-@app.route('/diet3000')
-def diet3000():
-    return render_template("diet3000.html", user=user_check())
-
-
-@app.route('/diet3500')
-def diet3500():
-    return render_template("diet3500.html", user=user_check())
+    return render_template("personal.html", user=user_check())
 
 
 @app.route('/fit_brownie')

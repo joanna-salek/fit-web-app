@@ -10,6 +10,17 @@
                 <form action="{{ url_for("log_in") }}" method="POST">
                     <div class="container box reg_log" style="text-align: left">
                         <h2 class="text-center font-weight-bold my-3">Log in</h2>
+                        <div class="col-12">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    <ul class=flashes style="list-style-type: none">
+                                        {% for category, message in messages %}
+                                            <li class="alert alert-{{ category }}">{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endwith %}
+                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Adress</label>
                             <input type="text" class="form-control" id="email1" name="email">
