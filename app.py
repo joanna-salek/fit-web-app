@@ -137,6 +137,9 @@ def diets():
         age = request.form.get("age")
         active = request.form.get("activity")
         goal = request.form.get("goal")
+        if not weight or not height or not gender or not age or not active:
+            flash("you must fill all boxes", "danger")
+            return redirect(url_for("diets"))
         g_factor = 5
         if gender == "Female":
             g_factor = -161
